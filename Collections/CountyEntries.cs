@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 
-namespace CountyApplication
+namespace CountyProject
 {
     public class CountyEntries : ICollection<CountyEntry>
     {
