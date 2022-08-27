@@ -1,0 +1,29 @@
+Beaver County - Beaver
+Box Elder County - Brigham City
+Cache County - Logan
+Carbon County - Price
+Daggett County - Manila
+Davis County - Farmington
+Duchesne County - Duchesne
+Emery County - Castle Dale
+Garfield County - Panguitch
+Grand County - Moab
+Iron County - Parowan
+Juab County - Nephi
+Kane County - Kanab
+Millard County - Fillmore
+Morgan County - Morgan
+Piute County - Junction
+Rich County - Randolph
+Salt Lake County - Salt Lake City
+San Juan County - Monticello
+Sanpete County - Manti
+Sevier County - Richfield
+Summit County - Coalville
+Tooele County - Tooele
+Uintah County - Vernal
+Utah County - Provo
+Wasatch County - Heber City
+Washington County - St. George
+Wayne County - Loa
+Weber County - Ogden

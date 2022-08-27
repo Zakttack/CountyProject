@@ -1,0 +1,82 @@
+Adams County - Natchez
+Alcorn County - Corinth
+Amite County - Liberty
+Attalla County - Kosciusko
+Benton County - Ashland
+Bolivar County - Rosedale and Cleveland
+Calhoun County - Pittsboro
+Carroll County - Vaiden and Carrollton
+Chickasaw County - Houston and Okolona
+Choctaw County - Ackerman
+Claiborne County - Port Gibson
+Clarke County - Quitman
+Clay County - West Point
+Coahoma County - Clarksdale
+Copiah County - Hazlehurst
+Covington County - Collins
+DeSoto County - Hernando
+Forrest County - Hattiesburg
+Franklin County - Meadville
+George County - Lucedale
+Greene County - Leakesville
+Grenada County - Grenada
+Hancock County - Bay St. Louis
+Harrison County - Gulfport
+Hinds County - Raymond and Jackson
+Holmes County - Lexington
+Humphreys County - Belzoni
+Issaquena County - Mayersville
+Itawamba County - Fulton
+Jackson County - Pascagoula
+Jasper County - Bay Springs and Paulding
+Jefferson County - Fayette
+Jefferson Davis County - Prentiss
+Jones County - Laurel and Ellisville
+Kemper County - De Kalb
+Lafayette County - Oxford
+Lamar County - Purvis
+Lauderdale County - Meridian
+Lawrence County - Monticello
+Leake County - Carthage
+Lee County - Tupelo
+Leflore County - Greenwood
+Lincoln County - Brookhaven
+Lowndes County - Columbus
+Madison County - Canton
+Marion County - Columbia
+Marshall County - Holly Springs
+Monroe County - Aberdeen
+Montgomery County - Winona
+Neshoba County - Philadelphia
+Newton County - Decatur
+Noxubee County - Macon
+Oktibbeha County - Starkville
+Panola County - Batesville and Sardis
+Pearl River County - Poplarville
+Perry County - New Augusta
+Pike County - Magnolia
+Pontotoc County - Pontotoc
+Prentiss County - Booneville
+Quitman County - Marks
+Rankin County - Brandon
+Scott County - Forest
+Sharkey County - Rolling Fork
+Simpson County - Mendenhall
+Smith County - Raleigh
+Stone County - Wiggins
+Sunflower County - Indianola
+Tallahatchie County - Charleston and Sumner
+Tate County - Senatobia
+Tippah County - Ripley
+Tishomingo County - Iuka
+Tunica County - Tunica
+Union County - New Albany
+Walthall County - Tylertown
+Warren County - Vicksburg
+Washington County - Greenville
+Wayne County - Waynesboro
+Webster County - Walthall
+Wilkinson County - Woodville
+Winston County - Louisville
+Yalobusha County - Coffeeville and Water Valley
+Yazoo County - Yazoo City

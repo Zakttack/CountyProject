@@ -1,0 +1,62 @@
+Albany County - Albany
+Allegany County - Belmont
+Bronx County - Bronx
+Broome County - Binghamton
+Cattaraugus County - Little Valley
+Cayuga County - Auburn
+Chautauqua County - Mayville
+Chemung County - Elmira
+Chenango County - Norwich
+Clinton County - Plattsburgh
+Columbia County - Hudson
+Cortland County - Cortland
+Delaware County - Delhi
+Dutchess County - Poughkeepsie
+Erie County - Buffalo
+Essex County - Elizabethtown
+Franklin County - Malone
+Fulton County - Johnstown
+Genesee County - Batavia
+Greene County - Catskill
+Hamilton County - Lake Pleasant
+Herkimer County - Herkimer
+Jefferson County - Watertown
+Kings County - Brooklyn
+Lewis County - Lowville
+Livingston County - Geneseo
+Madison County - Wampsville
+Monroe County - Rochester
+Montgomery County - Fonda
+Nassau County - Mineola
+New York County - Manhattan
+Niagara County - Lockport
+Oneida County - Utica
+Onondaga County - Syracuse
+Ontario County - Canandaigua
+Orange County - Goshen
+Orleans County - Albion
+Oswego County - Oswego
+Otsego County - Cooperstown
+Putnam County - Carmel
+Queens County - Jamaica
+Rensselaer County - Troy
+Richmond County - St. George
+Rockland County - New City
+Saratoga County - Ballston Spa
+Schenectady County - Schenectady
+Schoharie County - Schoharie
+Schuyler County - Watkins Glen
+Seneca County - Waterloo
+St. Lawrence County - Canton
+Steuben County - Bath
+Suffolk County - Riverhead
+Sullivan County - Monticello
+Tioga County - Owego
+Tompkins County - Ithaca
+Ulster County - Kingston
+Warren County - Lake George
+Washington County - Fort Edward
+Wayne County - Lyons
+Westchester County - White Plains
+Wyoming County - Warsaw
+Yates County - Penn Yan

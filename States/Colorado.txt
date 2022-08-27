@@ -1,0 +1,64 @@
+Adams County - Brighton
+Alamosa County - Alamosa
+Arapahoe County - Littleton
+Archuleta County - Pagosa Springs
+Baca County - Springfield
+Bent County - Las Animas
+Boulder County - Boulder
+Broomfield County - Broomfield
+Chaffee County - Salida
+Cheyenne County - Cheyenne Wells
+Clear Creek County - Georgetown
+Conejos County - Conejos
+Costilla County - San Luis
+Crowley County - Ordway
+Custer County - Westcliffe
+Delta County - Delta
+Denver County - Denver
+Dolores County - Dove Creek
+Douglas County - Castle Rock
+Eagle County - Eagle
+El Paso County - Colorado Springs
+Elbert County - Kiowa
+Fremont County - Cañon City
+Garfield County - Glenwood Springs
+Gilpin County - Central City
+Grand County - Hot Sulphur Springs
+Gunnison County - Gunnison
+Hinsdale County - Lake City
+Huerfano County - Walsenburg
+Jackson County - Walden
+Jefferson County - Golden
+Kiowa County - Eads
+Kit Carson County - Burlington
+La Plata County - Durango
+Lake County - Leadville
+Larimer County - Fort Collins
+Las Animas County - Trinidad
+Lincoln County - Hugo
+Logan County - Sterling
+Mesa County - Grand Junction
+Mineral County - Creede
+Moffat County - Craig
+Montezuma County - Cortez
+Montrose County - Montrose
+Morgan County - Fort Morgan
+Otero County - La Junta
+Ouray County - Ouray
+Park County - Fairplay
+Phillips County - Holyoke
+Pitkin County - Aspen
+Prowers County - Lamar
+Pueblo County - Pueblo
+Rio Blanco County - Meeker
+Rio Grande County - Del Norte
+Routt County - Steamboat Springs
+Saguache County - Saguache
+San Juan County - Silverton
+San Miguel County - Telluride
+Sedgwick County - Julesburg
+Summit County - Breckenridge
+Teller County - Cripple Creek
+Washington County - Akron
+Weld County - Greeley
+Yuma County - Wray

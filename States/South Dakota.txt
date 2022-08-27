@@ -1,0 +1,66 @@
+Aurora County - Plankinton
+Beadle County - Huron
+Bennett County - Martin
+Bon Homme County - Tyndall
+Brookings County - Brookings
+Brown County - Aberdeen
+Brule County - Chamberlain
+Buffalo County - Gann Valley
+Butte County - Belle Fourche
+Campbell County - Mound City
+Charles Mix County - Lake Andes
+Clark County - Clark
+Clay County - Vermillion
+Codington County - Watertown
+Corson County - McIntosh
+Custer County - Custer
+Davison County - Mitchell
+Day County - Webster
+Deuel County - Clear Lake
+Dewey County - Timber Lake
+Douglas County - Armour
+Edmunds County - Ipswich
+Fall River County - Hot Springs
+Faulk County - Faulkton
+Grant County - Milbank
+Gregory County - Burke
+Haakon County - Philip
+Hamlin County - Hayti
+Hand County - Miller
+Hanson County - Alexandria
+Harding County - Buffalo
+Hughes County - Pierre
+Hutchinson County - Olivet
+Hyde County - Highmore
+Jackson County - Kadoka
+Jerauld County - Wessington Springs
+Jones County - Murdo
+Kingsbury County - De Smet
+Lake County - Madison
+Lawrence County - Deadwood
+Lincoln County - Canton
+Lyman County - Kennebec
+Marshall County - Britton
+McCook County - Salem
+McPherson County - Leola
+Meade County - Sturgis
+Mellette County - White River
+Miner County - Howard
+Minnehaha County - Sioux Falls
+Moody County - Flandreau
+Pennington County - Rapid City
+Perkins County - Bison
+Potter County - Gettysburg
+Roberts County - Sisseton
+Sanborn County - Woonsocket
+Shannon County - Hot Springs
+Spink County - Redfield
+Stanley County - Fort Pierre
+Sully County - Onida
+Todd County - Winner
+Tripp County - Winner
+Turner County - Parker
+Union County - Elk Point
+Walworth County - Selby
+Yankton County - Yankton
+Ziebach County - Dupree
