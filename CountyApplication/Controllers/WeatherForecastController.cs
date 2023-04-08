@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CountyTestApplication.Controllers
+namespace CountyApplication.Controllers
 {
     [ApiController]
     [Route("[controller]")]

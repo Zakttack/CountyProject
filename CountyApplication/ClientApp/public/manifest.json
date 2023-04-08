@@ -1,6 +1,6 @@
 {
-  "short_name": "CountyTestApplication",
-  "name": "CountyTestApplication",
+  "short_name": "CountyApplication",
+  "name": "CountyApplication",
   "icons": [
     {
       "src": "favicon.ico",
