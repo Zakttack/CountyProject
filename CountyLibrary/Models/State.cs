@@ -46,5 +46,15 @@ namespace CountyLibrary.Models
         {
             return StateName;
         }
+
+        public static bool operator== (State a, State b)
+        {
+            return a.Equals(b);
+        }
+
+        public static bool operator!= (State a, State b)
+        {
+            return !a.Equals(b);
+        }
     }
 }
