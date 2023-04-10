@@ -9,7 +9,7 @@ export class Layout extends Component {
     return (
       <div>
         <NavMenu />
-        <p>Select a State: <StatesDropdown /></p>
+        <StatesDropdown />
       </div>
     );
   }

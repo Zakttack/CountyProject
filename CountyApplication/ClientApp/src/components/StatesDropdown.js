@@ -3,24 +3,24 @@ export class StatesDropdown extends Component {
     static displayName = StatesDropdown.name;
     constructor(props) {
         super(props);
-        this.state = {states: [], selectedState: ''};
+        this.state = {stateNames: [], selectedStateName: ''};
     }
 
     componentDidMount() {
         fetch('/api/states')
         .then(response => response.json())
-        .then(data => this.setState({states: data}));
+        .then(data => this.setState({stateNames: data}));
     }
 
     handleStateChange(event) {
-        this.setState({selectedState: event.target.value});
+        this.setState({selectedStateName: event.target.value});
     }
 
     handleSubmit(event) {
         fetch('/api/selectedstate', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(this.state.selectedState)
+            body: JSON.stringify(this.state.selectedStateName)
         });
         event.preventDefault();
     }
@@ -28,9 +28,10 @@ export class StatesDropdown extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <select value={this.state.selectedState} onChange={this.handleStateChange.bind(this)}>
-                    {this.state.states.map((state, index) => (
-                        <option key={index} value={state}>{state}</option>
+                <p>Select a State: </p>
+                <select id="statesDropdownControl" value={this.state.selectedStateName} onChange={this.handleStateChange.bind(this)}>
+                    {this.state.stateNames.map((stateName, index) => (
+                        <option key={index} value={stateName}>{stateName}</option>
                     ))}
                 </select>
                 <button type="submit">Submit</button>
