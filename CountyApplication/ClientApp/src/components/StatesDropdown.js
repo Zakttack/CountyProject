@@ -9,7 +9,7 @@ export class StatesDropdown extends Component {
     componentDidMount() {
         fetch('/api/states')
         .then(response => response.json())
-        .then(data => this.setState({states: data}))
+        .then(data => this.setState({states: data}));
     }
 
     handleStateChange(event) {
