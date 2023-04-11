@@ -10,10 +10,10 @@ namespace CountyLibrary.Tables
     public class TestTable : IEnumerable<TestEntry>
     {
         private readonly State selectedState;
-        private readonly IReadOnlyList<Entry> entries;
+        private readonly IEnumerable<Entry> entries;
         private readonly ICollection<TestEntry> testEntries;
 
-        public TestTable(State selectedState, IReadOnlyList<Entry> entries)
+        public TestTable(State selectedState, IEnumerable<Entry> entries)
         {
             this.selectedState = selectedState;
             this.entries = entries;

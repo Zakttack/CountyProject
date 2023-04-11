@@ -3,7 +3,7 @@ using Microsoft.VisualBasic.FileIO;
 using System.Collections;
 namespace CountyLibrary.Tables
 {
-    public class EntriesTable : IReadOnlyList<Entry>
+    public class EntriesTable : IEnumerable<Entry>
     {
         private ICollection<Entry> contents;
 
@@ -29,22 +29,6 @@ namespace CountyLibrary.Tables
                     State state = new State(values[2]);
                     contents.Add(new Entry(county, countySeatName, state));
                 }
-            }
-        }
-        
-        public int Count
-        {
-            get
-            {
-                return contents.Count;
-            }
-        }
-
-        public Entry this[int index]
-        {
-            get
-            {
-                return contents.ToList()[index];
             }
         }
 

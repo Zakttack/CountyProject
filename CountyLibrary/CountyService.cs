@@ -4,7 +4,7 @@ namespace CountyLibrary
 {
     public class CountyService
     {
-        private IReadOnlyList<Entry> entries;
+        private IEnumerable<Entry> entries;
         public CountyService()
         {
             entries = new EntriesTable();
