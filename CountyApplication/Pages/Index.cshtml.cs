@@ -15,7 +15,6 @@ namespace CountyApplication.Pages
         }
         public IActionResult OnPost(string selectedStateName)
         {
-            Service.SelectedState = new State(selectedStateName);
             return Redirect("Test");
         }
     }

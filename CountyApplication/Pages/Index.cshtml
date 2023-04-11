@@ -1,5 +1,6 @@
 ﻿@page
 @using CountyApplication
+@using CountyApplication.Controllers
 @using CountyLibrary.Models
 @using Microsoft.AspNetCore.Components.Web
 @model IndexModel
@@ -9,11 +10,24 @@
 
 <form method="post">
     <p>Select a State: </p>
-    <select name="selectedStateControl">
+    <select name="selectedStateControl" onchange="handleChange(this)">
         @foreach (State state in Service.CountyService.States)
         {
-            <option value="@state.StateName">@state.StateName</option>
+            <option value="@state">@state.StateName</option>
         }
     </select>
     <button type="submit">Choose</button>
 </form>
+<script>
+    function handleChange(selectElement) {
+        var selectedValue = selectElement.value;
+        fetch ('/api/States/StateChange', {
+            method: 'POST',
+            headers: {
+                 'Content-Type': 'application/json'
+            },
+            body: 
+                JSON.stringify({ statename: selectedValue })
+        });
+    }
+</script>

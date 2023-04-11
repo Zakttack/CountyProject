@@ -20,6 +20,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
 app.UseAuthorization();
 
 app.MapRazorPages();
