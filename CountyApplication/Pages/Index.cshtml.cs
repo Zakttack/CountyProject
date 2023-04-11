@@ -13,11 +13,10 @@ namespace CountyApplication.Pages
         {
             _logger = logger;
         }
-
         public IActionResult OnPost(string selectedStateName)
         {
             Service.SelectedState = new State(selectedStateName);
-            return Redirect("./Test.cshtml");
+            return Redirect("Test");
         }
     }
 }
