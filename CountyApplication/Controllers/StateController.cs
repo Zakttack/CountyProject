@@ -3,23 +3,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CountyApplication.Controllers
 {
-    [ApiController]
-    public class StateController : ControllerBase
+    public class StateController : Controller
     {
-        [HttpGet("api/states")]
-        public IEnumerable<string> GetStates()
+        [HttpGet]
+        [Route("api/State/GetStateNames")]
+        public IEnumerable<State> GetStateNames()
         {
-            ICollection<string> stateNames = new HashSet<string>();
-            foreach (State state in Service.CountyService.States)
-            {
-                stateNames.Add(state.StateName);
-            }
-            return stateNames;
+            return Service.CountyService.States;
         }
-        [HttpPost("api/selectedstate")]
-        public IActionResult SetSelectedState([FromBody] string stateName)
+        [HttpPost]
+        [Route("api/State/SetSelectedState")]
+        public IActionResult SetSelectedState(State selectedState)
         {
-            Service.SelectedState = new State(stateName);
+            Service.SelectedState = selectedState;
             return Ok();
         }
     }

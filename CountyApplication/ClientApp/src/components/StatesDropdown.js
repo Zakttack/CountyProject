@@ -1,15 +1,11 @@
 import React, {Component} from "react";
 export class StatesDropdown extends Component {
     static displayName = StatesDropdown.name;
-    constructor(props) {
-        super(props);
+    constructor() {
         this.state = {stateNames: [], selectedStateName: ''};
-    }
-
-    componentDidMount() {
-        fetch('/api/states')
+        fetch('api/State/GetStateNames')
         .then(response => response.json())
-        .then(data => this.setState({stateNames: data}));
+        .then(data => {this.setState({stateNames: data})});
     }
 
     handleStateChange(event) {
@@ -17,7 +13,7 @@ export class StatesDropdown extends Component {
     }
 
     handleSubmit(event) {
-        fetch('/api/selectedstate', {
+        fetch('api/State/SetSelectedState', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.selectedStateName)
