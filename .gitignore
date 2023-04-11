@@ -1,9 +1,10 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 /.vs
-CountyApplication/bin
+CountyApplicationReact/bin
+/.vscode
 
 # dependencies
-CountyApplication/ClientApp/node_modules
+CountyApplicationReact/ClientApp/node_modules
 
 # testing
 /coverage
