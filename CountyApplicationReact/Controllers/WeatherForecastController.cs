@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CountyApplication.Controllers
+namespace CountyApplicationReact.Controllers
 {
     [ApiController]
     [Route("[controller]")]

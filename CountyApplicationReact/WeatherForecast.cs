@@ -1,4 +1,4 @@
-namespace CountyApplication
+namespace CountyApplicationReact
 {
     public class WeatherForecast
     {

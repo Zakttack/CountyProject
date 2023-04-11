@@ -1,7 +1,7 @@
 using CountyLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CountyApplication.Controllers
+namespace CountyApplicationReact.Controllers
 {
     public class StateController : Controller
     {

@@ -1,7 +1,6 @@
-using CountyLibrary;
+﻿using CountyLibrary;
 using CountyLibrary.Models;
-
-namespace CountyApplicationReact
+namespace CountyApplication
 {
     public class Service
     {
@@ -20,6 +19,7 @@ namespace CountyApplicationReact
         public static void LoadEntries()
         {
             CountyService = new CountyService();
+            Console.WriteLine("Entries Loaded");
         }
     }
 }

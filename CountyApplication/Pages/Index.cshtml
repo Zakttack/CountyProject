@@ -1,0 +1,19 @@
+﻿@page
+@using CountyApplication
+@using CountyLibrary.Models
+@using Microsoft.AspNetCore.Components.Web
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <p>Select a State: </p>
+    <select name="selectedStateControl">
+        @foreach (State state in Service.CountyService.States)
+        {
+            <option value="@state.StateName">@state.StateName</option>
+        }
+    </select>
+    <button type="submit">Choose</button>
+</form>
