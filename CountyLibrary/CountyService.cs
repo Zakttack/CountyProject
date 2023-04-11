@@ -4,7 +4,7 @@ namespace CountyLibrary
 {
     public class CountyService
     {
-        private IReadOnlyCollection<Entry> entries;
+        private IReadOnlyList<Entry> entries;
         public CountyService()
         {
             entries = new EntriesTable();
@@ -22,18 +22,10 @@ namespace CountyLibrary
                 return states;
             }
         }
-        
-        public IEnumerable<County> GetCounties(State state)
+
+        public IEnumerable<TestEntry> GetTest(State selectedState)
         {
-            ICollection<County> counties = new SortedSet<County>(new CountyComparer());
-            foreach (Entry entry in entries)
-            {
-                if (entry.State == state)
-                {
-                    counties.Add(entry.County);
-                }
-            }
-            return counties;
+            return new TestTable(selectedState, entries);
         }
 
         private class CountyComparer : IComparer<County>

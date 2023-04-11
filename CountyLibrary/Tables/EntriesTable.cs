@@ -3,7 +3,7 @@ using Microsoft.VisualBasic.FileIO;
 using System.Collections;
 namespace CountyLibrary.Tables
 {
-    public class EntriesTable : IReadOnlyCollection<Entry>
+    public class EntriesTable : IReadOnlyList<Entry>
     {
         private ICollection<Entry> contents;
 
@@ -37,6 +37,14 @@ namespace CountyLibrary.Tables
             get
             {
                 return contents.Count;
+            }
+        }
+
+        public Entry this[int index]
+        {
+            get
+            {
+                return contents.ToList()[index];
             }
         }
 
