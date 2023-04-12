@@ -4,7 +4,7 @@ namespace CountyApplication
 {
     public class Service
     {
-        public static IEnumerable<string> CountySeats
+        public static IEnumerable<SelectedCountySeatView> CountySeats
         {
             get
             {

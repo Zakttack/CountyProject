@@ -28,14 +28,14 @@ namespace CountyLibrary
             return new TestTable(selectedState, GetEntriesByState(selectedState));
         }
 
-        public IEnumerable<string> GetCountySeatsByState(State selectedState)
+        public IEnumerable<SelectedCountySeatView> GetCountySeatsByState(State selectedState)
         {
-            ICollection<string> contents = new SortedSet<string>();
+            ICollection<SelectedCountySeatView> contents = new SortedSet<SelectedCountySeatView>(new CountySeatComparer());
             foreach (Entry entry in entries)
             {
                 if (entry.State == selectedState)
                 {
-                    contents.Add(entry.CountySeatName);
+                    contents.Add(new SelectedCountySeatView(entry.CountySeatName));
                 }
             }
             return contents;
@@ -52,6 +52,14 @@ namespace CountyLibrary
                 }
             }
             return subEntries;
+        }
+
+        private class CountySeatComparer : IComparer<SelectedCountySeatView>
+        {
+            public int Compare(SelectedCountySeatView a, SelectedCountySeatView b)
+            {
+                return a.CountySeatName.CompareTo(b.CountySeatName);
+            }
         }
         private class EntryComparer : IComparer<Entry>
         {

@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using CountyLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CountyApplication.Controllers
@@ -18,9 +15,10 @@ namespace CountyApplication.Controllers
         }
         [HttpPost]
         [Route("CountySeatChange")]
-        public IActionResult CountySeatChange(string selectedValue)
+        public IActionResult CountySeatChange(SelectedCountySeatView selectedValue)
         {
-            Service.CurrentEntry.SelectedCountySeat = selectedValue;
+            TestEntry entry = Service.TestEntries[selectedValue.IndexLocation];
+            entry.SelectedCountySeat = selectedValue.CountySeatName;
             return Ok();
         }
     }
