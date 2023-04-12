@@ -20,10 +20,7 @@ namespace CountyLibrary.Tables
             testEntries = new HashSet<TestEntry>();
             foreach (Entry entry in entries)
             {
-                if (entry.State == selectedState)
-                {
-                    testEntries.Add(new TestEntry(entry));
-                }
+                testEntries.Add(new TestEntry(entry));
             }
         }
 

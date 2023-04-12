@@ -25,14 +25,39 @@ namespace CountyLibrary
 
         public IEnumerable<TestEntry> GetTest(State selectedState)
         {
-            return new TestTable(selectedState, entries);
+            return new TestTable(selectedState, GetEntriesByState(selectedState));
         }
 
-        private class CountyComparer : IComparer<County>
+        public IEnumerable<string> GetCountySeatsByState(State selectedState)
         {
-            public int Compare(County a, County b)
+            ICollection<string> contents = new SortedSet<string>();
+            foreach (Entry entry in entries)
             {
-                return a.CompareTo(b);
+                if (entry.State == selectedState)
+                {
+                    contents.Add(entry.CountySeatName);
+                }
+            }
+            return contents;
+        }
+
+        private IEnumerable<Entry> GetEntriesByState(State selectedState)
+        {
+            ICollection<Entry> subEntries = new SortedSet<Entry>(new EntryComparer());
+            foreach (Entry entry in entries)
+            {
+                if (entry.State == selectedState)
+                {
+                    subEntries.Add(entry);
+                }
+            }
+            return subEntries;
+        }
+        private class EntryComparer : IComparer<Entry>
+        {
+            public int Compare(Entry a, Entry b)
+            {
+                return a.County.CompareTo(b.County);
             }
         }
 
