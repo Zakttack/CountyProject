@@ -29,7 +29,7 @@ namespace CountyApplication
             set;
         }
 
-        public static IEnumerable<TestEntry> TestEntries
+        public static IReadOnlyList<TestEntry> TestEntries
         {
             get
             {

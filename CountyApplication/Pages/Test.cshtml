@@ -7,25 +7,24 @@
 
 <h1>@Service.SelectedState.StateName State @ViewData["Title"]</h1>
 <ol>
-    @foreach (TestEntry entry in Service.TestEntries)
+    @for (int i = 0; i < Service.TestEntries.Count; i++)
     {
-        Service.CurrentEntry = entry;
-        int count = 1;
-        <li>@entry.County.CountyName: 
-            <select name="countySeatSelection @count" onchange="handleChange(this)">
+        <li>
+            <label for="dropdown-@i+1">@Service.TestEntries[i].County.CountyName: </label>
+            <select id="dropdown-@i+1" name="dropdown-@i+1" onchange="handleChange(@i+1)">
                 @foreach (string cs in Service.CountySeats)
                 {
                     <option value="@cs">@cs</option>
                 }
             </select>
         </li>
-        count++;
     }
 </ol>
 <script>
-    function handleChange(selectElement) {
-        var selectedValue = selectElement.value;
-        fetch ('/api/CountySeats/CountySeatsChange', {
+    function handleChange(index) {
+        var dropdown = document.getElementById('dropdown-' + index);
+        var selectedValue = dropdown.value;
+        fetch ('/api/CountySeats/CountySeatChange', {
             method: 'POST',
             headers: {
                  'Content-Type': 'application/json'

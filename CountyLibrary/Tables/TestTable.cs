@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CountyLibrary.Tables
 {
-    public class TestTable : IEnumerable<TestEntry>
+    public class TestTable : IReadOnlyList<TestEntry>
     {
         private readonly State selectedState;
         private readonly IEnumerable<Entry> entries;
@@ -21,6 +21,22 @@ namespace CountyLibrary.Tables
             foreach (Entry entry in entries)
             {
                 testEntries.Add(new TestEntry(entry));
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return testEntries.Count;
+            }
+        }
+
+        public TestEntry this[int index]
+        {
+            get
+            {
+                return testEntries.ToList()[index];
             }
         }
 
