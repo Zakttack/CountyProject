@@ -1,11 +1,37 @@
 @page
+@using CountyLibrary.Models
 @model CountyApplication.Pages.Test
 @{
     ViewData["Title"] = "Test";
 }
 
 <h1>@Service.SelectedState.StateName State @ViewData["Title"]</h1>
-
-<div>
-    <p>This is the test Page</p>
-</div>
+<ol>
+    @foreach (TestEntry entry in Service.TestEntries)
+    {
+        Service.CurrentEntry = entry;
+        int count = 1;
+        <li>@entry.County.CountyName: 
+            <select name="countySeatSelection @count" onchange="handleChange(this)">
+                @foreach (string cs in Service.CountySeats)
+                {
+                    <option value="@cs">@cs</option>
+                }
+            </select>
+        </li>
+        count++;
+    }
+</ol>
+<script>
+    function handleChange(selectElement) {
+        var selectedValue = selectElement.value;
+        fetch ('/api/CountySeats/CountySeatsChange', {
+            method: 'POST',
+            headers: {
+                 'Content-Type': 'application/json'
+            },
+            body: 
+                JSON.stringify({ selectedValue: selectedValue })
+        });
+    }
+</script>
