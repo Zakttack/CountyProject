@@ -17,12 +17,6 @@ namespace CountyApplication
             private set;
         }
 
-        public static TestEntry CurrentEntry
-        {
-            get;
-            set;
-        }
-
         public static State SelectedState
         {
             get;
@@ -34,6 +28,14 @@ namespace CountyApplication
             get
             {
                 return CountyService.GetTest(SelectedState);
+            }
+        }
+
+        public static IEnumerable<ResultEntry> TestResults
+        {
+            get
+            {
+                return CountyService.GetResults(TestEntries);
             }
         }
 

@@ -1,4 +1,3 @@
-using CountyLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +8,17 @@ using Microsoft.Extensions.Logging;
 
 namespace CountyApplication.Pages
 {
-    public class Test : PageModel
+    public class Result : PageModel
     {
-        private readonly ILogger<Test> _logger;
+        private readonly ILogger<Result> _logger;
 
-        public Test(ILogger<Test> logger)
+        public Result(ILogger<Result> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult OnPost(IReadOnlyList<TestEntry> testEntries)
+        public void OnGet()
         {
-            return Redirect("Result");
         }
     }
 }

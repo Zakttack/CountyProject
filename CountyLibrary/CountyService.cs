@@ -23,6 +23,11 @@ namespace CountyLibrary
             }
         }
 
+        public IEnumerable<ResultEntry> GetResults(IReadOnlyList<TestEntry> testEntries)
+        {
+            return new ResultTable(testEntries);
+        }
+
         public IReadOnlyList<TestEntry> GetTest(State selectedState)
         {
             return new TestTable(selectedState, GetEntriesByState(selectedState));

@@ -6,20 +6,23 @@
 }
 
 <h1>@Service.SelectedState.StateName State @ViewData["Title"]</h1>
-<ol>
-    @for (int i = 0; i < Service.TestEntries.Count; i++)
-    {
-        <li>
-            <label for="dropdown-@i">@Service.TestEntries[i].County.CountyName: </label>
-            <select id="dropdown-@i" name="dropdown-@i" onchange="handleChange(@i)">
-                @foreach (SelectedCountySeatView view in Service.CountySeats)
-                {
-                    <option value="@view">@view.CountySeatName</option>
-                }
-            </select>
-        </li>
-    }
-</ol>
+<form method="post">
+    <ol>
+        @for (int i = 0; i < Service.TestEntries.Count; i++)
+        {
+            <li>
+                <label for="dropdown-@i">@Service.TestEntries[i].County.CountyName: </label>
+                <select id="dropdown-@i" name="dropdown-@i" onchange="handleChange(@i)">
+                    @foreach (SelectedCountySeatView view in Service.CountySeats)
+                    {
+                        <option value="@view">@view.CountySeatName</option>
+                    }
+                </select>
+            </li>
+        }
+    </ol><br/>
+    <button type="submit">Submit Test</button>
+</form>
 <script>
     function handleChange(index) {
         var dropdown = document.getElementById('dropdown-' + index);

@@ -30,6 +30,14 @@ namespace CountyLibrary.Models
             }
         }
 
+        internal string CorrectCountySeat
+        {
+            get
+            {
+                return entry.CountySeatName;
+            }
+        }
+
         public string SelectedCountySeat
         {
             get;
