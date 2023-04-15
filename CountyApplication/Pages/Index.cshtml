@@ -3,14 +3,14 @@
 @using CountyApplication.Controllers
 @using CountyLibrary.Models
 @using Microsoft.AspNetCore.Components.Web
-@model IndexModel
+@model CountyApplication.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
 <form method="post">
-    <p>Select a State: </p>
     <select name="selectedStateControl" onchange="handleChange(this)">
+        <option value="">Select a State</option>
         @foreach (State state in Service.CountyService.States)
         {
             <option value="@state">@state.StateName</option>

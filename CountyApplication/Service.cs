@@ -25,10 +25,8 @@ namespace CountyApplication
 
         public static IReadOnlyList<TestEntry> TestEntries
         {
-            get
-            {
-                return CountyService.GetTest(SelectedState);
-            }
+            get;
+            private set;
         }
 
         public static IEnumerable<ResultEntry> TestResults
@@ -43,6 +41,11 @@ namespace CountyApplication
         {
             CountyService = new CountyService();
             Console.WriteLine("Entries Loaded");
+        }
+
+        public static void LoadTest()
+        {
+            TestEntries = CountyService.GetTest(SelectedState);
         }
     }
 }

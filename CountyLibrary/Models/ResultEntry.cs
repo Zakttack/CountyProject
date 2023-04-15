@@ -29,7 +29,7 @@ namespace CountyLibrary.Models
         {
             get
             {
-                return testEntry.IsCorrect ? "Correct" : $"The Correct Anser Is: {testEntry.CorrectCountySeat}";
+                return testEntry.IsCorrect ? "Correct" : $"The Correct Answer Is: {testEntry.CorrectCountySeat}";
             }
         }
 

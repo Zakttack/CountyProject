@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CountyLibrary.Models
 {
-    public class State : IComparable<State>, IEquatable<State>
+    public class State : BaseModel<State>
     {
         public State(string stateName)
         {
@@ -18,28 +18,14 @@ namespace CountyLibrary.Models
             private set;
         }
 
-        public int CompareTo(State other)
-        {
-            return StateName.CompareTo(other.StateName);
-        }
-
-        public bool Equals(State other)
-        {
-            return CompareTo(other) == 0;
-        }
-
         public override bool Equals(object obj)
         {
-            if (!(obj is State))
-            {
-                return false;
-            }
-            return Equals((State)obj);
+            return base.Equals(obj);
         }
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return StateName.GetHashCode();
         }
 
         public override string ToString()
@@ -49,11 +35,19 @@ namespace CountyLibrary.Models
 
         public static bool operator== (State a, State b)
         {
+            if (IsNull(a))
+            {
+                return IsNull(b);
+            }
             return a.Equals(b);
         }
 
         public static bool operator!= (State a, State b)
         {
+            if (IsNull(a))
+            {
+                return !IsNull(b);
+            }
             return !a.Equals(b);
         }
     }

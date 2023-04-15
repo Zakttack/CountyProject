@@ -10,4 +10,8 @@
 		<ProjectReference Include="../CountyLibrary/CountyLibrary.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="System.Windows.Forms" Version="4.0.0" />
+	</ItemGroup>
+
 </Project>

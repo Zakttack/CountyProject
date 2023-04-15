@@ -13,6 +13,7 @@ namespace CountyApplication.Pages
         {
             _logger = logger;
         }
+
         public IActionResult OnPost(string selectedStateName)
         {
             return Redirect("Test");

@@ -5,7 +5,7 @@ namespace CountyLibrary.Tables
 {
     public class EntriesTable : IEnumerable<Entry>
     {
-        private ICollection<Entry> contents;
+        private readonly ICollection<Entry> contents;
 
         public EntriesTable()
         {
@@ -17,13 +17,13 @@ namespace CountyLibrary.Tables
             bool isHeader = true;
             while (!entryParcer.EndOfData)
             {
+                string[] values = entryParcer.ReadFields();
                 if (isHeader)
                 {
                     isHeader = !isHeader;
                 }
                 else
                 {
-                    string[] values = entryParcer.ReadFields();
                     County county = new County(values[0]);
                     string countySeatName = values[1];
                     State state = new State(values[2]);

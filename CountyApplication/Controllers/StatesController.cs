@@ -21,5 +21,11 @@ namespace CountyApplication.Controllers
             Service.SelectedState = selectedValue;
             return Ok();
         }
+        [HttpPost]
+        [Route("StateNotFound")]
+        public IActionResult StateNotFound()
+        {
+            return Redirect(Url.Action("Index", "Home"));
+        }
     }
 }

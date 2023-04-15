@@ -1,9 +1,25 @@
 @page
+@using CountyLibrary.Models
 @model CountyApplication.Pages.Result
 @{
     ViewData["Title"] = "Result";
 }
-
-<h1>@ViewData["Title"]</h1>
-
-<p>This is the results page</p>
+<table>
+    <thread>
+        <tr>
+            <th>County Name</th>
+            <th>County Seat Selected</th>
+            <th>Message Result</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (ResultEntry resultEntry in Service.TestResults)
+        {
+            <tr>
+                <td>@resultEntry.CountyName</td>
+                <td>@resultEntry.SelectedCountySeatName</td>
+                <td>@resultEntry.Message</td>
+            </tr>
+        }
+    </tbody>
+</table>

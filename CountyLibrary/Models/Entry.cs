@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CountyLibrary.Models
 {
-    public class Entry : IEquatable<Entry>
+    public class Entry : BaseModel<Entry>
     {
         public Entry(County county, string countySeatName, State state)
         {
@@ -32,23 +32,9 @@ namespace CountyLibrary.Models
             private set;
         }
 
-        public bool Equals(Entry other)
-        {
-            return ToString() == other.ToString();
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (!(obj is Entry))
-            {
-                return false;
-            }
-            return Equals((Entry)obj);
-        }
-
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return County.GetHashCode() + State.GetHashCode() + CountySeatName.GetHashCode();
         }
 
         public override string ToString()

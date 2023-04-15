@@ -1,6 +1,8 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace CountyLibrary.Models
 {
-    public class County : IComparable<County>, IEquatable<County>
+    public class County : BaseModel<County>
     {
         public County(string countyName)
         {
@@ -17,11 +19,6 @@ namespace CountyLibrary.Models
             private set;
         }
 
-        public int CompareTo(County other)
-        {
-            return CountyName.CompareTo(other.CountyName);
-        }
-
         public override bool Equals(object obj)
         {
             if (!(obj is County))
@@ -31,14 +28,9 @@ namespace CountyLibrary.Models
             return Equals((County)obj);
         }
 
-        public bool Equals(County other)
-        {
-            return CompareTo(other) == 0;
-        }
-
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return CountyName.GetHashCode();
         }
 
         public override string ToString()
@@ -48,11 +40,19 @@ namespace CountyLibrary.Models
 
         public static bool operator== (County a, County b)
         {
+            if (IsNull(a))
+            {
+                return IsNull(b);
+            }
             return a.Equals(b);
         }
 
         public static bool operator!= (County a, County b)
         {
+            if (IsNull(a))
+            {
+                return !IsNull(b);
+            }
             return !a.Equals(b);
         }
     }
