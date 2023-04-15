@@ -21,5 +21,10 @@ namespace CountyApplication.Pages
         {
             
         }
+
+        public IActionResult OnPost()
+        {
+            return Redirect("Index");
+        }
     }
 }
