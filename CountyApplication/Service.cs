@@ -37,6 +37,14 @@ namespace CountyApplication
             }
         }
 
+        public static bool ValidState
+        {
+            get
+            {
+                return !State.IsNull(SelectedState);
+            }
+        }
+
         public static void LoadEntries()
         {
             CountyService = new CountyService();

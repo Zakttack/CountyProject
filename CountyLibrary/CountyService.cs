@@ -10,6 +10,21 @@ namespace CountyLibrary
             entries = new EntriesTable();
         }
 
+        public string GetGrade(IEnumerable<ResultEntry> resultEntries)
+        {
+            double correctCount = 0, count = 0;
+            foreach (ResultEntry entry in resultEntries)
+            {
+                if (entry.Message == "Correct")
+                {
+                    correctCount++;
+                }
+                count++;
+            }
+            double result = (correctCount / count) * 100;
+            return $"{result.ToString("0.##")}% ({correctCount}/{count})";
+        }
+
         public IEnumerable<State> States
         {
             get

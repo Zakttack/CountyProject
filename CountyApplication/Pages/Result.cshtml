@@ -4,45 +4,54 @@
 @{
     ViewData["Title"] = "Result";
 }
-<form method="post">
-    <table>
-        <thread>
+
+<table>
+    <thread>
+        <tr>
+            <th>County Name</th>
+            <th>County Seat Selected</th>
+            <th>Message Result</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (ResultEntry resultEntry in Service.TestResults)
+        {
             <tr>
-                <th>County Name</th>
-                <th>County Seat Selected</th>
-                <th>Message Result</th>
+                <td>@resultEntry.CountyName</td>
+                <td>@resultEntry.SelectedCountySeatName</td>
+                <td>@resultEntry.Message</td>
             </tr>
-        </thread>
-        <tbody>
-            @foreach (ResultEntry resultEntry in Service.TestResults)
-            {
-                <tr>
-                    <td>@resultEntry.CountyName</td>
-                    <td>@resultEntry.SelectedCountySeatName</td>
-                    <td>@resultEntry.Message</td>
-                </tr>
-            }
-        </tbody>
-        <style>
-            table {
-                border-collapse: collapse;
-                border-color: black;
-                border-style: double;
-                width: 100%;
-            }
-            th, td {
-                border: .5cm;
-                border-color: black;
-                border-style: solid;
-                padding: 8px;
-                text-align: left;
-            }
-            tr {
-                border: .5cm;
-                border-color: black;
-                border-style: solid;
-            }
-        </style>
-    </table> </br>
-    <button type="submit">Try Another State</button>
-</form>
+        }
+    </tbody>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-color: black;
+            border-style: double;
+            width: 100%;
+        }
+        th, td {
+            border: .5cm;
+            border-color: black;
+            border-style: solid;
+            padding: 8px;
+            text-align: left;
+        }
+        tr {
+            border: .5cm;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+</table> </br>
+<p>Grade: @Service.CountyService.GetGrade(Service.TestResults)</p>
+<button onclick="tryAnother()">Try Another State</button> 
+<button onclick="reAttempt()">Reattempt @Service.SelectedState.StateName</button>
+<script>
+    function reAttempt() {
+        window.location.href = "/Test";
+    }
+    function tryAnother() {
+        window.location.href = "/Index";
+    }
+</script>

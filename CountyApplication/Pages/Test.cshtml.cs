@@ -20,7 +20,7 @@ namespace CountyApplication.Pages
 
         public IActionResult OnPost(IReadOnlyList<TestEntry> testEntries)
         {
-            return Redirect("Result");
+            return Service.ValidState ? Redirect("Result") : Redirect("Index");
         }
     }
 }
